@@ -29,7 +29,7 @@
     let skipf = document.getElementById("skipf");
     let un = "";
     username.subscribe((val) => (un = val));
-    var ws = new WebSocket(`ws://./api/room/${name}?username=${un}`);
+    var ws = new WebSocket(`ws://${window.location.hostname}/api/room/${name}?username=${un}`);
     ws.addEventListener("open", function (event) {
       console.log(`got username as ${username.username}`);
       let un = "";
